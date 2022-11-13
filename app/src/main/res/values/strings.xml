@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Shoe Store</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shoes">Shoes</string>
+    <string name="add_shoe">Add Shoe</string>
+    <string name="logout">Logout</string>
+    <string name="name">Name</string>
+    <string name="company">Company</string>
+    <string name="size">Size</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_shoes_to_your_store">Add shoes to your store</string>
+    <string name="add_shoes_description">We will need you to enter some information such as your name, size, manufacturer, etc</string>
+    <string name="get_started">Get Started</string>
+    <string name="create_account">Create Account</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcome_description">Thank you for downloading the application. We hope you enjoy our services</string>
+    <string name="next">Next</string>
+    <string name="error_empty_name">Shoe name is Empty</string>
+    <string name="error_empty_company">Company is Empty</string>
+    <string name="error_empty_or_not_digits_size">Shoe size is Empty or not digits</string>
+    <string name="error_empty_description">Description is Empty</string>
+
+</resources>
