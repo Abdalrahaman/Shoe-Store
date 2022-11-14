@@ -3,7 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.fragments.LoginFragment">
-
+   <!--
+   Used ConstraintLayout to put email and password Edittext and two buttons (login - create account)
+   with chain style packed.
+   -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

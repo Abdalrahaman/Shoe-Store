@@ -3,7 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.fragments.WelcomeFragment">
-
+    <!--
+    Used ConstraintLayout to put next button in bottom right screen,
+    and welcome text and description in center with chain style packed.
+    -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -29,7 +32,7 @@
             android:gravity="center"
             android:paddingHorizontal="@dimen/_16dp"
             android:text="@string/welcome_description"
-            android:textSize="18sp"
+            android:textSize="@dimen/_18sp"
             app:layout_constraintBottom_toTopOf="@id/buttonNext"
             app:layout_constraintTop_toBottomOf="@id/titleWelcome" />
 

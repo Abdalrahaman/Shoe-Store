@@ -8,13 +8,13 @@ import com.omranic.shoestore.models.Shoe
 
 class ShoeViewModel : ViewModel() {
 
-    private val _name = MutableLiveData<String>()
+    val shoeName = MutableLiveData<String>()
 
-    private val _size = MutableLiveData<String>()
+    val shoeSize = MutableLiveData<String>()
 
-    private val _company = MutableLiveData<String>()
+    val company = MutableLiveData<String>()
 
-    private val _description = MutableLiveData<String>()
+    val description = MutableLiveData<String>()
 
     private val shoeList = mutableListOf<Shoe>()
 
@@ -25,44 +25,36 @@ class ShoeViewModel : ViewModel() {
     fun addShoe() {
         shoeList.add(
             Shoe(
-                _name.value.toString().trim(),
-                _size.value.toString().toDouble(),
-                _company.value.toString().trim(),
-                _description.value.toString().trim()
+                shoeName.value.toString().trim(),
+                shoeSize.value.toString().toDouble(),
+                company.value.toString().trim(),
+                description.value.toString().trim()
             )
         )
         _shoes.value = shoeList
+        clearShoeInputs()
     }
 
-    fun onShoeNameSelected(name: String) {
-        _name.value = name
-    }
-
-    fun onShoeCompanySelected(company: String) {
-        _company.value = company
-    }
-
-    fun onShoeSizeSelected(size: String) {
-        _size.value = size
-    }
-
-    fun onShoeDescriptionSelected(description: String) {
-        _description.value = description
+    private fun clearShoeInputs() {
+        shoeName.value = ""
+        shoeSize.value = ""
+        company.value = ""
+        description.value = ""
     }
 
     fun isNameEmpty(): Boolean {
-        return _name.value.isNullOrEmpty()
+        return shoeName.value.isNullOrEmpty()
     }
 
     fun isCompanyEmpty(): Boolean {
-        return _company.value.isNullOrEmpty()
+        return company.value.isNullOrEmpty()
     }
 
     fun isSizeEmptyOrNotDigits(): Boolean {
-        return _size.value.isNullOrEmpty() || !_size.value!!.isDigitsOnly()
+        return shoeSize.value.isNullOrEmpty() || !shoeSize.value!!.isDigitsOnly()
     }
 
     fun isDescriptionEmpty(): Boolean {
-        return _description.value.isNullOrEmpty()
+        return description.value.isNullOrEmpty()
     }
 }

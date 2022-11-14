@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.fragments.ListingFragment">
-
+    <!--
+    Used ConstraintLayout to put FloatingActionButton on the ScrollView.
+    -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -14,13 +16,16 @@
             android:fillViewport="true"
             android:scrollbars="none">
 
+            <!--
+            Used LinearLayout to add shoe item view and display it vertically
+            -->
             <LinearLayout
                 android:id="@+id/linearLayoutShoes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingHorizontal="@dimen/_16dp"
-                android:paddingTop="@dimen/_16dp"/>
+                android:paddingTop="@dimen/_16dp" />
 
         </ScrollView>
 

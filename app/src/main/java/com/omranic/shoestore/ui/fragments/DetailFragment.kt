@@ -23,15 +23,14 @@ class DetailFragment : Fragment() {
     ): View? {
         val binding: FragmentDetailBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_detail, container, false)
+
+        binding.shoeViewModel = shoeViewModel
+        binding.lifecycleOwner = viewLifecycleOwner
+
         binding.buttonCancel.setOnClickListener {
             findNavController().popBackStack()
         }
         binding.buttonSave.setOnClickListener {
-            shoeViewModel.onShoeNameSelected(binding.editTextName.text.toString())
-            shoeViewModel.onShoeCompanySelected(binding.editTextCompany.text.toString())
-            shoeViewModel.onShoeSizeSelected(binding.editTextSize.text.toString())
-            shoeViewModel.onShoeDescriptionSelected(binding.editTextDescription.text.toString())
-
             when {
                 shoeViewModel.isNameEmpty() -> Toast.makeText(
                     requireContext(),

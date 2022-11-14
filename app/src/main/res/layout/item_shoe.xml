@@ -9,7 +9,10 @@
             name="shoe"
             type="com.omranic.shoestore.models.Shoe" />
     </data>
-
+   <!--
+   Used ConstraintLayout to create complexity of the shoe item layout,
+   that display the name of shoe, company, size and description.
+   -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

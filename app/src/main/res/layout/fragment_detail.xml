@@ -4,6 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.fragments.DetailFragment">
 
+    <data>
+
+        <variable
+            name="shoeViewModel"
+            type="com.omranic.shoestore.viewmodels.ShoeViewModel" />
+    </data>
+    <!--
+    Used ConstraintLayout to put four input Edittext in center,
+    and two Buttons (save - cancel) baseline of cancel button.
+    -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -27,7 +37,8 @@
                 android:id="@+id/editTextName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:text="@={shoeViewModel.shoeName}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -49,7 +60,8 @@
                 android:id="@+id/editTextCompany"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:text="@={shoeViewModel.company}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -71,7 +83,8 @@
                 android:id="@+id/editTextSize"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:text="@={shoeViewModel.shoeSize}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -92,7 +105,8 @@
                 android:id="@+id/editTextDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:text="@={shoeViewModel.description}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
